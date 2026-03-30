@@ -9,8 +9,8 @@
 
     <meta property="og:title" content="Hola Mundo">
     <meta property="og:description" content="A test website for my smoking hot domain">
-    <meta property="og:image" content="https://mlucianoeze.dev/assets/bleh.png">
-    <meta property="og:image:secure_url" content="https://mlucianoeze.dev/assets/bleh.png">
+    <meta property="og:image" content="https://mlucianoeze.dev/assets/cats/bleh.png">
+    <meta property="og:image:secure_url" content="https://mlucianoeze.dev/assets/cats/bleh.png">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1289">
     <meta property="og:image:height" content="1288">
@@ -26,21 +26,36 @@
     <meta name="twitter:image" content="https://mlucianoeze.dev/assets/bleh.png">
     <meta name="twitter:image:alt" content="Silly cat">
     
-    <link rel="icon" type="image/png" href="https://mlucianoeze.dev/assets/bleh.png">
+    <link rel="icon" type="image/png" href="https://mlucianoeze.dev/assets/cats/bleh.png">
 
     <title>Hola mundo</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Hola mundo</h1>
-        <p id="message">Esta es mi página de prueba :3</p>
-        <p id="clickMsg">Hacé clic abajo</p>
-        <button id="clickBtn">Click me!</button>
+        <p id="message">mlucianoeze's domain.</p>
+        <p id="clickMsg" style="visibility: hidden;">Hacé clic abajo</p>
     </div>
-        <div id="imgContainer">
-            <img src="assets/2071489c41ffc5820bbb2bde34c87d90.jpg" alt="Gato">
+
+    <audio id="gone" preload="auto" src="assets/deltarune/snd_mysterygo.wav"></audio>
+    <audio id="ominous" preload="auto" src="assets/deltarune/snd_ominous.wav"></audio>
+
+    <div id="dialog" class="dialogbox">
+        <div id="proceed" class="option option-left">
+            <img class="soul" src="assets/deltarune/soul.png">
+            <p>Proceed</p>
         </div>
+        <div class="placeholder selected">
+            <img class="soul" src="assets/deltarune/soul.png">
+        </div>
+        <div id="do-not" class="option option-right">
+            <img class="soul" src="assets/deltarune/soul.png">
+            <p>Do not</p>
+        </div>
+    </div>
+    <div id="imgContainer">
+        <img src="assets/deltarune/ralsei.png" alt="Ralsei plush">
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

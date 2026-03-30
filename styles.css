@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'determination';
+    src: url('assets/deltarune/determination.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
 * {
     margin: 0;
     padding: 0;
@@ -5,10 +12,9 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    background-image: url('assets/tumblr_og6l8q8a0H1rn9y41o1_640.jpg');
-    background-repeat: repeat;
-    background-position: 0 0;
+    font-family: 'determination', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: black;
+    color: white;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -18,40 +24,59 @@ body {
     position: relative;
 }
 
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(3px);
-    z-index: 0;
-}
-
 .container {
-    background: white;
-    border-radius: 1rem;
+    color: white;
     padding: 2rem 1.5rem;
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     max-width: 100%;
     width: 100%;
-    position: relative;
-    z-index: 1;
 }
 
 h1 {
     font-size: 2rem;
-    color: #333;
     margin-bottom: 1rem;
 }
 
 p {
     font-size: 1rem;
-    color: #666;
     margin-bottom: 1.5rem;
+}
+
+.dialogbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 0.5rem solid white;
+    min-width: 20rem;
+    padding: 2rem;
+}
+
+.dialogbox .option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dialogbox .option p {
+    cursor: pointer;
+    user-select: none;
+    font-size: 1.5rem;
+    margin-left: 0.75rem;
+    margin-bottom: 0;
+}
+
+.dialogbox .selected {
+    color: #fffb00;
+}
+
+.dialogbox .option.selected img.soul {
+    visibility: visible;
+}
+
+.dialogbox img.soul {
+    visibility: hidden;
+    width: 1.25rem;
+    height: 1.25rem;
 }
 
 #imgContainer {
@@ -81,18 +106,18 @@ p {
 }
 
 button {
-    background: #667eea;
+    font-family: 'determination';
+    background-color: black;
     color: white;
     border: none;
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
     border-radius: 0.5rem;
     cursor: pointer;
-    transition: background 0.3s ease;
 }
 
 button:hover {
-    background: #5568d3;
+    color: #fffb00;
 }
 
 button:active {
@@ -103,6 +128,17 @@ button:active {
     .container {
         padding: 3rem 2.5rem;
         max-width: 500px;
+    }
+
+    .dialogbox {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 40rem;
+        height: 13rem;
+    }
+
+    .dialogbox .placeholder.selected img.soul {
+        visibility: visible;
     }
 
     #imgContainer {
