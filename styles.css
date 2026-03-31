@@ -45,10 +45,10 @@ p {
 .dialogbox {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    border: 0.5rem solid white;
+    align-items: flex-start;
+    border: 0.4rem solid white;
     min-width: 20rem;
-    padding: 2rem;
+    padding: 1.5rem;
 }
 
 .dialogbox .option {
@@ -132,9 +132,14 @@ button:active {
 
     .dialogbox {
         flex-direction: row;
+        align-items: center;
         justify-content: space-between;
         width: 40rem;
-        height: 13rem;
+        height: 11rem;
+    }
+
+    .dialogbox .option {
+        margin-bottom: 1rem;
     }
 
     .dialogbox .placeholder.selected img.soul {
